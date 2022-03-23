@@ -1,3 +1,5 @@
+<link rel="icon" href= "https://raw.githubusercontent.com/KyleGortych/KyleGortych.github.io/main/wizard.png"/>
+
 <img align="center" src="https://raw.githubusercontent.com/KyleGortych/KyleGortych/main/githubprofile.gif">
   <div id="badges">
     <a href="your-linkedin-URL">
