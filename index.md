@@ -1,12 +1,3 @@
-<head>
-    <title>Kyle Gortych's git page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Kyle Gortych"/>
-    <meta name="description" content="Current status under development">
-    <link rel="icon" href= "https://raw.githubusercontent.com/KyleGortych/KyleGortych.github.io/main/wizard.png"/>
-</head>
-  
 <img align="center" src="https://raw.githubusercontent.com/KyleGortych/KyleGortych/main/githubprofile.gif">
   <div id="badges">
     <a href="your-linkedin-URL">
