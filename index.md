@@ -6,10 +6,10 @@
 
   <div id="badges">
     <a href="your-linkedin-URL">
-      <img align="center" src="https://img.shields.io/badge/LinkedIn-white?style=plastic&logo=linkedin&logoColor=blue" alt="LinkedIn Badge"/>
+      <img align="center" src="https://img.shields.io/badge/LinkedIn-white?style=plastic&logo=linkedin&logoColor=blue" height="20" alt="LinkedIn Badge"/>
     </a>
     <a href="https://github.com/KyleGortych">
-      <img src="https://img.shields.io/badge/Github-white?style=plastic&logo=github&logoColor=black" alt="Github Badge"/>
+      <img src="https://img.shields.io/badge/Github-white?style=plastic&logo=github&logoColor=black" height="20" alt="Github Badge"/>
     </a>
   </div>
   
