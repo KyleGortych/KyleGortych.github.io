@@ -19,3 +19,7 @@
 - <a href="https://wwwpub.zih.tu-dresden.de/~bodirsky/Graph-Homomorphisms.pdf#page=20" target="_blank">Semilattice Polymorphisms</a>
 - <a href="https://cyberleninka.org/article/n/1097585.pdf#page=4" target="_blank">Example Weighted Decision Matrix</a>
 - <a href="your-research-url" target="_blank">Blank research link</a>
+
+<footer>
+  <a href="https://www.flaticon.com/free-icons/wizard" title="wizard icons">Icon created by Freepik - Flaticon</a>
+</footer>
