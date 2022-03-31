@@ -13,7 +13,7 @@
     </a>
   </div>
   
-# Currently Reading
+# Currently Reading/Studying
 - <a href="https://cs.stanford.edu/people/shadjis/IEEE_FPL2019_Hadjis.pdf" target="_blank">FPGA and TensorFlow Design</a>
 - <a href="https://formal.kastel.kit.edu/~beckert/teaching/Spezifikation-SS04/11Z.pdf" target="_blank">The Z Specification Language</a>
 - <a href="https://wwwpub.zih.tu-dresden.de/~bodirsky/Graph-Homomorphisms.pdf#page=20" target="_blank">Semilattice Polymorphisms</a>
