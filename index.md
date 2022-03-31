@@ -1,7 +1,13 @@
 <head>
 <link rel="icon" href= "https://raw.githubusercontent.com/KyleGortych/KyleGortych.github.io/main/wizard.png"/>
 </head>
-  
+
+<style>
+  .footer {
+    display: none;
+  }
+</style>
+
 <img align="center" src="https://raw.githubusercontent.com/KyleGortych/KyleGortych/main/githubprofile.gif">
 
   <div id="badges">
