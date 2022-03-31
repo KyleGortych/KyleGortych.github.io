@@ -3,15 +3,6 @@ title: Kyle Gortych git page
 description: Current status under development
 icon: wizard.png
 
-<div id="footer_wrap" class="outer">
-      <footer class="inner">
-        
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-        <p><a href="https://www.flaticon.com/free-icons/wizard" title="wizard icons"></a></p>
-      </footer>
-</div>
-
-
 footer_links:
   - title: Published with
     url: https://pages.github.com
