@@ -20,6 +20,10 @@
 - <a href="https://cyberleninka.org/article/n/1097585.pdf#page=4" target="_blank">Example Weighted Decision Matrix</a>
 - <a href="your-research-url" target="_blank">Blank research link</a>
 
-<footer>
-  <a href="https://www.flaticon.com/free-icons/wizard" title="wizard icons">Icon created by Freepik - Flaticon</a>
-</footer>
+<div id="footer_wrap" class="outer">
+      <footer class="inner">
+        
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+        <p><a href="https://www.flaticon.com/free-icons/wizard" title="wizard icons">Icon created by Freepik - Flaticon</a></p>
+      </footer>
+</div>
