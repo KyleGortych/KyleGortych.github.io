@@ -10,3 +10,7 @@ footer_links:
   - title: Icon created by Freepik - Flaticon
     url: https://www.flaticon.com/free-icons/wizard
     icon: wizard icon
+
+exclude:
+  - LICENSE
+  - README.md
