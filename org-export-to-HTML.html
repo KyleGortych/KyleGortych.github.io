@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-02 Sat 13:27 -->
+<!-- 2022-04-02 Sat 13:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Org Export to HTML Example.</title>
@@ -209,15 +209,15 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org044c2a7">Org Export</a>
+<li><a href="#orge01c753">Org Export</a>
 <ul>
-<li><a href="#org9f2726b">This is a List</a></li>
-<li><a href="#org6886055">Exporting</a></li>
-<li><a href="#orge9be46d">Examples of Snippets</a></li>
-<li><a href="#org8b0201e">Python example</a></li>
-<li><a href="#org7f5bcb9">Rust example</a></li>
-<li><a href="#org1768cf7">Exporting references</a></li>
-<li><a href="#org9599947">References</a></li>
+<li><a href="#orgb524952">This is a List</a></li>
+<li><a href="#org95e7056">Exporting</a></li>
+<li><a href="#org5f6f076">Examples of Snippets</a></li>
+<li><a href="#org87e6348">Python example</a></li>
+<li><a href="#org2810954">Rust example</a></li>
+<li><a href="#orge316bd9">Exporting references</a></li>
+<li><a href="#org90c1352">References</a></li>
 </ul>
 </li>
 </ul>
@@ -227,17 +227,17 @@
 <a href="index.html">home</a>
 </p>
 
-<div id="outline-container-org044c2a7" class="outline-2">
-<h2 id="org044c2a7">Org Export</h2>
-<div class="outline-text-2" id="text-org044c2a7">
+<div id="outline-container-orge01c753" class="outline-2">
+<h2 id="orge01c753">Org Export</h2>
+<div class="outline-text-2" id="text-orge01c753">
 <p>
 This is a paragraph for the first heading. In org mode it is converted to the appropriate tags. Org mode has lots of features. One of the features are snipits. Snippets are blocks of code in orgmode that allow one to run diffrent languages and even shells within one org document. This is usefull because, one org mode doc can essentially be included in a project with various languages and run them all interactively showing parts of the whole programs operation.
 </p>
 </div>
 
-<div id="outline-container-org9f2726b" class="outline-3">
-<h3 id="org9f2726b">This is a List</h3>
-<div class="outline-text-3" id="text-org9f2726b">
+<div id="outline-container-orgb524952" class="outline-3">
+<h3 id="orgb524952">This is a List</h3>
+<div class="outline-text-3" id="text-orgb524952">
 <ul class="org-ul">
 <li>one</li>
 <li>two</li>
@@ -246,18 +246,18 @@ This is a paragraph for the first heading. In org mode it is converted to the ap
 </div>
 </div>
 
-<div id="outline-container-org6886055" class="outline-3">
-<h3 id="org6886055">Exporting</h3>
-<div class="outline-text-3" id="text-org6886055">
+<div id="outline-container-org95e7056" class="outline-3">
+<h3 id="org95e7056">Exporting</h3>
+<div class="outline-text-3" id="text-org95e7056">
 <p>
 To export use &rsquo;SPACE-m-e&rsquo; then &rsquo;h for HTML&rsquo; &rsquo;last type h or o&rsquo;.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge9be46d" class="outline-3">
-<h3 id="orge9be46d">Examples of Snippets</h3>
-<div class="outline-text-3" id="text-orge9be46d">
+<div id="outline-container-org5f6f076" class="outline-3">
+<h3 id="org5f6f076">Examples of Snippets</h3>
+<div class="outline-text-3" id="text-org5f6f076">
 <p>
 One enables a snippet within an org doc by using&#x2026;
 </p>
@@ -271,9 +271,9 @@ One enables a snippet within an org doc by using&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org8b0201e" class="outline-3">
-<h3 id="org8b0201e">Python example</h3>
-<div class="outline-text-3" id="text-org8b0201e">
+<div id="outline-container-org87e6348" class="outline-3">
+<h3 id="org87e6348">Python example</h3>
+<div class="outline-text-3" id="text-org87e6348">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #007bb3; font-weight: bold;">def</span> <span style="color: #622f7d; font-weight: bold;">foo</span>(x):
     <span style="color: #007bb3; font-weight: bold;">if</span> x&gt;<span style="color: #00d1e0;">0</span>:
@@ -292,9 +292,9 @@ One enables a snippet within an org doc by using&#x2026;
 </div>
 
 
-<div id="outline-container-org7f5bcb9" class="outline-3">
-<h3 id="org7f5bcb9">Rust example</h3>
-<div class="outline-text-3" id="text-org7f5bcb9">
+<div id="outline-container-org2810954" class="outline-3">
+<h3 id="org2810954">Rust example</h3>
+<div class="outline-text-3" id="text-org2810954">
 <p>
 This required a workaround. What was used, was a shell snippet to run another file. If a code snippet can&rsquo;t export a result due to lsp dependency along with the src, then running it in a shell snippet and exporting the result works as well. You can choose whether to include the shell snippet commands using :exports both or :exports results respectively. However compiled language snippets should export results in the usual manner. What might be happening is as it&rsquo;s exported, the snippet&rsquo;s lsp isn&rsquo;t added to the html.
 </p>
@@ -316,9 +316,9 @@ pi value is 3.142857142857143
 </div>
 </div>
 
-<div id="outline-container-org1768cf7" class="outline-3">
-<h3 id="org1768cf7">Exporting references</h3>
-<div class="outline-text-3" id="text-org1768cf7">
+<div id="outline-container-orge316bd9" class="outline-3">
+<h3 id="orge316bd9">Exporting references</h3>
+<div class="outline-text-3" id="text-orge316bd9">
 <p>
 The examples below will add spaces between each list or prevent opening link in a new tab which is undesirable.
 </p>
@@ -359,9 +359,9 @@ Here is the appropriate format
 </div>
 </div>
 
-<div id="outline-container-org9599947" class="outline-3">
-<h3 id="org9599947">References</h3>
-<div class="outline-text-3" id="text-org9599947">
+<div id="outline-container-org90c1352" class="outline-3">
+<h3 id="org90c1352">References</h3>
+<div class="outline-text-3" id="text-org90c1352">
 <footer>
     <ul>
         <li><p>DT youtube ref <a href="https://www.youtube.com/watch?v=K6S-AKm5snc&t=141s " target="_blank">link</a></p></li>
@@ -369,6 +369,7 @@ Here is the appropriate format
         <li><p>org export turorial <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html" target="_blank">link</a></p></li>
         <li><p>org turorial <a href="https://emacsclub.github.io/html/org_tutorial.html#sec-6-1" target="_blank">link</a></p></li>
         <li><p>distrotube's website <a href="https://distro.tube/index.html" target="_blank">link</a></p></li>
+        <li><p>org code block example escape chars <a href="https://orgmode.org/manual/Literal-Examples.html" target="_blank">link</a></p></li>
         <li><p>org code block escape char for links and lists ie plus <a href="https://orgmode.org/manual/Escape-Character.html" target="_blank">link</a></p></li>
         <li><p>org export html <a href="https://orgmode.org/manual/Quoting-HTML-tags.html" target="_blank">link</a></p></li>
         <li><p>Icon created by Freepik - Flaticon <a href="https://www.flaticon.com/free-icons/wizard" title="wizard icons" target="_blank">wizard icon</a></p></li>
@@ -380,7 +381,7 @@ Here is the appropriate format
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kyle Gortych</p>
-<p class="date">Created: 2022-04-02 Sat 13:27</p>
+<p class="date">Created: 2022-04-02 Sat 13:43</p>
 </div>
 </body>
 </html>
