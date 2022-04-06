@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-05 Tue 21:37 -->
+<!-- 2022-04-06 Wed 14:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Org Export to HTML Example.</title>
@@ -209,19 +209,19 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc8e0d22">Org Export</a></li>
-<li><a href="#orgf928770">Paragraphs</a>
+<li><a href="#org9615285">Org Export</a></li>
+<li><a href="#org12beb77">Paragraphs</a>
 <ul>
-<li><a href="#org4430345">HTML Outline</a></li>
+<li><a href="#org31de39a">Outline for Float Paragraphs</a></li>
 </ul>
 </li>
-<li><a href="#orgc8f71a9">The Syntax for Lists</a></li>
-<li><a href="#org93e9f9c">Exporting</a></li>
-<li><a href="#org65300c7">Examples of Snippets</a></li>
-<li><a href="#org49a775b">Python example</a></li>
-<li><a href="#orgcdf8a3f">Rust example</a></li>
-<li><a href="#org42f20b4">Exporting references</a></li>
-<li><a href="#org2ac1301">References</a></li>
+<li><a href="#org04da1da">The Syntax for Lists</a></li>
+<li><a href="#org8111efd">Exporting</a></li>
+<li><a href="#org790790c">Examples of Snippets</a></li>
+<li><a href="#org7ac6914">Python example</a></li>
+<li><a href="#org16d354c">Rust example</a></li>
+<li><a href="#orgd874219">Exporting references</a></li>
+<li><a href="#org087840c">References</a></li>
 </ul>
 </div>
 </div>
@@ -231,37 +231,37 @@
 <br><br>
 <div id="badges">
     <a href="index.html" target="_self">
-      <img src="https://img.shields.io/badge/-home-white?style=plastic" height="20" alt="org mode" />
+      <img src="https://img.shields.io/badge/-home-white?style=plastic" alt="org mode" />
     </a>
 </div>
 </center>
 </header>
 
-<div id="outline-container-orgc8e0d22" class="outline-2">
-<h2 id="orgc8e0d22">Org Export</h2>
-<div class="outline-text-2" id="text-orgc8e0d22">
+<div id="outline-container-org9615285" class="outline-2">
+<h2 id="org9615285">Org Export</h2>
+<div class="outline-text-2" id="text-org9615285">
 <p>
 This is a paragraph for the first heading. In org mode it is converted to the appropriate tags. Org mode has lots of features. One of the features are snipits. Snippets are blocks of code in orgmode that allow one to run diffrent languages and even shells within one org document. This is usefull because, one org mode doc can essentially be included in a project with various languages and run them all interactively showing parts of the whole programs operation.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf928770" class="outline-2">
-<h2 id="orgf928770">Paragraphs</h2>
-<div class="outline-text-2" id="text-orgf928770">
-<div style="width: 100%;">
-    <div style="width: 50%; height: 150px; float: left;">
+<div id="outline-container-org12beb77" class="outline-2">
+<h2 id="org12beb77">Paragraphs</h2>
+<div class="outline-text-2" id="text-org12beb77">
+<div style="width: 100%; height: 125px;">
+    <div style="width: 50%; float: left;">
     Paragraph one here is accomplished with an org tag #​+BEGIN​_EXPORT html to directly input the html as is. Lastly using the html div tag and style float and margin settings.
     </div>
-    <div style="width: 50%; height: 150px; float: right;">
+    <div style="width: 50%; float: right;">
     Paragraph two here. If you use the pre tag to maunaly format, the exported txt will end up being encased in a box from orgs style backend. While this is more verbose than using the pre tag you don't have to worry about omiting the text from orgs styling. Also the paragraphs dont need their tags when in-between div tags.
     </div>
 </div>
 </div>
 
-<div id="outline-container-org4430345" class="outline-3">
-<h3 id="org4430345">HTML Outline</h3>
-<div class="outline-text-3" id="text-org4430345">
+<div id="outline-container-org31de39a" class="outline-3">
+<h3 id="org31de39a">Outline for Float Paragraphs</h3>
+<div class="outline-text-3" id="text-org31de39a">
 <div class="org-src-container">
 <pre class="src src-org"><span style="color: #484848;">#+BEGIN_EXPORT html</span>
 <span style="color: #d1d1d1;">&lt;</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;">&gt;</span>
@@ -279,9 +279,9 @@ This is a paragraph for the first heading. In org mode it is converted to the ap
 </div>
 </div>
 
-<div id="outline-container-orgc8f71a9" class="outline-2">
-<h2 id="orgc8f71a9">The Syntax for Lists</h2>
-<div class="outline-text-2" id="text-orgc8f71a9">
+<div id="outline-container-org04da1da" class="outline-2">
+<h2 id="org04da1da">The Syntax for Lists</h2>
+<div class="outline-text-2" id="text-org04da1da">
 <p>
 Unordered lists are started in org with a plus or minus sign. To show this an org code block is used with escape characters to demonstrate the org syntax from the exported html output.
 </p>
@@ -319,18 +319,18 @@ Unordered lists are started in org with a plus or minus sign. To show this an or
 </div>
 </div>
 
-<div id="outline-container-org93e9f9c" class="outline-2">
-<h2 id="org93e9f9c">Exporting</h2>
-<div class="outline-text-2" id="text-org93e9f9c">
+<div id="outline-container-org8111efd" class="outline-2">
+<h2 id="org8111efd">Exporting</h2>
+<div class="outline-text-2" id="text-org8111efd">
 <p>
 To export use &rsquo;SPACE-m-e&rsquo; then &rsquo;h for HTML&rsquo; &rsquo;last type h or o&rsquo;.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org65300c7" class="outline-2">
-<h2 id="org65300c7">Examples of Snippets</h2>
-<div class="outline-text-2" id="text-org65300c7">
+<div id="outline-container-org790790c" class="outline-2">
+<h2 id="org790790c">Examples of Snippets</h2>
+<div class="outline-text-2" id="text-org790790c">
 <p>
 One enables a snippet within an org doc by using&#x2026;
 </p>
@@ -344,9 +344,9 @@ One enables a snippet within an org doc by using&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org49a775b" class="outline-2">
-<h2 id="org49a775b">Python example</h2>
-<div class="outline-text-2" id="text-org49a775b">
+<div id="outline-container-org7ac6914" class="outline-2">
+<h2 id="org7ac6914">Python example</h2>
+<div class="outline-text-2" id="text-org7ac6914">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #007bb3; font-weight: bold;">def</span> <span style="color: #622f7d; font-weight: bold;">foo</span>(x):
     <span style="color: #007bb3; font-weight: bold;">if</span> x&gt;<span style="color: #00d1e0;">0</span>:
@@ -364,11 +364,11 @@ One enables a snippet within an org doc by using&#x2026;
 </div>
 </div>
 
-<div id="outline-container-orgcdf8a3f" class="outline-2">
-<h2 id="orgcdf8a3f">Rust example</h2>
-<div class="outline-text-2" id="text-orgcdf8a3f">
+<div id="outline-container-org16d354c" class="outline-2">
+<h2 id="org16d354c">Rust example</h2>
+<div class="outline-text-2" id="text-org16d354c">
 <div class="org-src-container">
-<pre class="src src-rust" id="orga874b19"><span style="color: #007bb3; font-weight: bold;">fn</span> <span style="color: #622f7d; font-weight: bold;">main</span>() {
+<pre class="src src-rust" id="org25b4225"><span style="color: #007bb3; font-weight: bold;">fn</span> <span style="color: #622f7d; font-weight: bold;">main</span>() {
     <span style="color: #F52749;">println!</span>(<span style="color: #1D8B15;">"pi value is </span><span style="color: #1D8B15; font-style: italic;">{}</span><span style="color: #1D8B15;">"</span>, get_pi());
 }
 
@@ -384,9 +384,9 @@ pi value is 3.142857142857143
 </div>
 </div>
 
-<div id="outline-container-org42f20b4" class="outline-2">
-<h2 id="org42f20b4">Exporting references</h2>
-<div class="outline-text-2" id="text-org42f20b4">
+<div id="outline-container-orgd874219" class="outline-2">
+<h2 id="orgd874219">Exporting references</h2>
+<div class="outline-text-2" id="text-orgd874219">
 <p>
 The examples below will add spaces between each list or prevent opening link in a new tab which is undesirable.
 </p>
@@ -427,9 +427,9 @@ Here is the appropriate format
 </div>
 </div>
 
-<div id="outline-container-org2ac1301" class="outline-2">
-<h2 id="org2ac1301">References</h2>
-<div class="outline-text-2" id="text-org2ac1301">
+<div id="outline-container-org087840c" class="outline-2">
+<h2 id="org087840c">References</h2>
+<div class="outline-text-2" id="text-org087840c">
 <footer>
     <ul>
         <li><p>DT youtube ref <a href="https://www.youtube.com/watch?v=K6S-AKm5snc&t=141s " target="_blank">link</a></p></li>
@@ -448,7 +448,7 @@ Here is the appropriate format
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kyle Gortych</p>
-<p class="date">Created: 2022-04-05 Tue 21:37</p>
+<p class="date">Created: 2022-04-06 Wed 14:44</p>
 </div>
 </body>
 </html>
