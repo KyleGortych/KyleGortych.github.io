@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-06 Wed 17:15 -->
+<!-- 2022-04-09 Sat 15:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Org Export to HTML Example.</title>
@@ -209,19 +209,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5e28c96">Org Export</a></li>
-<li><a href="#orgbe0e4c8">Paragraphs</a>
-<ul>
-<li><a href="#org9cf2406">Outline for Float Paragraphs</a></li>
-</ul>
-</li>
-<li><a href="#orgbd0d8e1">The Syntax for Lists</a></li>
-<li><a href="#org4382a91">Exporting</a></li>
-<li><a href="#orgcf04a41">Examples of Snippets</a></li>
-<li><a href="#org99a7cea">Python example</a></li>
-<li><a href="#org57e0ddb">Rust example</a></li>
-<li><a href="#org76b38b3">Exporting references</a></li>
-<li><a href="#orge0b737e">References</a></li>
+<li><a href="#org1fb6770">Org Export</a></li>
+<li><a href="#org37c70c4">Paragraphs</a></li>
+<li><a href="#org0d619b3">Flexbox and Orgmode</a></li>
+<li><a href="#orge6f4c07">The Syntax for Lists</a></li>
+<li><a href="#orgf187509">Examples of Snippets</a></li>
+<li><a href="#org207280d">Python example</a></li>
+<li><a href="#org3ff6e33">Rust example</a></li>
+<li><a href="#org090afb3">List of references in org</a></li>
+<li><a href="#org565bca2">Exporting the org file in Emacs</a></li>
+<li><a href="#orga3e2981">References</a></li>
 </ul>
 </div>
 </div>
@@ -236,117 +233,126 @@
 </center>
 </header>
 
-<div id="outline-container-org5e28c96" class="outline-2">
-<h2 id="org5e28c96">Org Export</h2>
-<div class="outline-text-2" id="text-org5e28c96">
+<div id="outline-container-org1fb6770" class="outline-2">
+<h2 id="org1fb6770">Org Export</h2>
+<div class="outline-text-2" id="text-org1fb6770">
 <p>
 This is a paragraph for the first heading. In org mode it is converted to the appropriate tags. Org mode has lots of features. One of the features are snipits. Snippets are blocks of code in orgmode that allow one to run diffrent languages and even shells within one org document. This is usefull because, one org mode doc can essentially be included in a project with various languages and run them all interactively showing parts of the whole programs operation.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgbe0e4c8" class="outline-2">
-<h2 id="orgbe0e4c8">Paragraphs</h2>
-<div class="outline-text-2" id="text-orgbe0e4c8">
-<div style="width: 100%; height: 150px;">
-    <div style="width: 50%; float: left;">
-    Paragraph one here is accomplished with an org tag #​+BEGIN​_EXPORT html to directly input the html as is. Lastly using the html div tag and style float and margin settings. If you use the pre tag to maunaly format, the exported txt will end up being encased in a box from orgs style backend. While this is more verbose than using the pre tag you don't have to worry about omiting the text from orgs styling. Also the paragraphs dont need their tags when in-between div tags.
-    </div>
-    <div style="width: 50%; float: right;">
-    Paragraph two here. This is the continuation of the second paragraph. Using this method helps with formatting. If you use the pre tag to maunaly format, the exported txt will end up being encased in a box from orgs style backend.
-    </div>
+<div id="outline-container-org37c70c4" class="outline-2">
+<h2 id="org37c70c4">Paragraphs</h2>
+<div class="outline-text-2" id="text-org37c70c4">
+<div style="display: flex;">
+
+  <div style="flex: 1; margin-right: 20px;">
+  Paragraph one here is accomplished with an org tag #​+BEGIN​_EXPORT html to directly input the html as is. Lastly using the html div tag, flex box, and margin settings. If you use the pre tag to maunaly format, the exported txt will end up being encased in a text code block from orgs style backend. While this is more verbose than using the pre tag you don't have to worry about orgs backend.
+  </div>
+
+  <div style="flex: 1;">
+  Paragraph two here. This is the continuation of the second paragraph. Using this method helps with formatting. If you use the pre tag to maunaly format, the exported txt will end up being encased in a box from orgs style backend.
+  </div>
+
 </div>
 <br><br>
 </div>
+</div>
 
-<div id="outline-container-org9cf2406" class="outline-3">
-<h3 id="org9cf2406">Outline for Float Paragraphs</h3>
-<div class="outline-text-3" id="text-org9cf2406">
+<div id="outline-container-org0d619b3" class="outline-2">
+<h2 id="org0d619b3">Flexbox and Orgmode</h2>
+<div class="outline-text-2" id="text-org0d619b3">
+<p>
+Orgmode&rsquo;s backend works nicely with the use of flexbox. While using orgmode I have found that some features like the pre tag and float will not align sections appropriately. To align elements horizontally, flexbox seems to work best.
+</p>
+
 <div class="org-src-container">
 <pre class="src src-org"><span style="color: #484848;">#+BEGIN_EXPORT html</span>
-<span style="color: #d1d1d1;">&lt;</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;">&gt;</span>
-<span style="color: #d1d1d1;">    &lt;</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;"> </span><span style="color: #e87400;">style</span><span style="color: #d1d1d1;">=</span><span style="color: #1D8B15;">"width: 50%; height: 100px; float: left;"</span><span style="color: #d1d1d1;">&gt;</span>
-<span style="color: #d1d1d1;">        Paragraph one here </span><span style="color: #d1d1d1; text-decoration: underline;">is accomplished</span><span style="color: #d1d1d1;"> with an org tag #&#8203;+BEGIN&#8203;_EXPORT html to directly input the html as is. Lastly using the html div tag and style float and margin settings.</span>
-<span style="color: #d1d1d1;">    &lt;/</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;">&gt;</span>
-<span style="color: #d1d1d1;">    &lt;</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;"> </span><span style="color: #e87400;">style</span><span style="color: #d1d1d1;">=</span><span style="color: #1D8B15;">"width: 50%; height: 100px; float: right;"</span><span style="color: #d1d1d1;">&gt;</span>
-<span style="color: #d1d1d1;">        Paragraph two here. If you use the pre tag to maunaly format, the exported txt will end up </span><span style="color: #d1d1d1; text-decoration: underline;">being encased</span><span style="color: #d1d1d1;"> in a box from orgs style backend. While this is more verbose than using the pre tag you don't have to worry about omiting the text from orgs styling. Also the paragraphs dont need their tags when inbetween div tags.</span>
-<span style="color: #d1d1d1;">    &lt;/</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;">&gt;</span>
+<span style="color: #d1d1d1;">&lt;</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;"> </span><span style="color: #e87400;">style</span><span style="color: #d1d1d1;">=</span><span style="color: #1D8B15;">"display: flex;"</span><span style="color: #d1d1d1;">&gt;</span>
+
+<span style="color: #d1d1d1;">  &lt;</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;"> </span><span style="color: #e87400;">style</span><span style="color: #d1d1d1;">=</span><span style="color: #1D8B15;">"flex: 1; margin-right: 20px;"</span><span style="color: #d1d1d1;">&gt;</span>
+<span style="color: #d1d1d1;">  Paragraph one here </span><span style="color: #d1d1d1; text-decoration: underline;">is accomplished</span><span style="color: #d1d1d1;"> with an org tag #&#8203;+BEGIN&#8203;_EXPORT html to directly input the html as is. Lastly using the html div tag, flex box, and margin settings. If you use the pre tag to maunaly format, the exported txt will end up </span><span style="color: #d1d1d1; text-decoration: underline;">being encased</span><span style="color: #d1d1d1;"> in a text code block from orgs style backend. While this is more verbose than using the pre tag you don't have to worry about orgs backend.</span>
+<span style="color: #d1d1d1;">  &lt;/</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;">&gt;</span>
+
+<span style="color: #d1d1d1;">  &lt;</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;"> </span><span style="color: #e87400;">style</span><span style="color: #d1d1d1;">=</span><span style="color: #1D8B15;">"flex: 1;"</span><span style="color: #d1d1d1;">&gt;</span>
+<span style="color: #d1d1d1;">  Paragraph two here. This is the continuation of the second paragraph. Using this method helps with formatting. If you use the pre tag to maunaly format, the exported txt will end up </span><span style="color: #d1d1d1; text-decoration: underline;">being encased</span><span style="color: #d1d1d1;"> in a box from orgs style backend.</span>
+<span style="color: #d1d1d1;">  &lt;/</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;">&gt;</span>
+
 <span style="color: #d1d1d1;">&lt;/</span><span style="color: #622f7d; font-weight: bold;">div</span><span style="color: #d1d1d1;">&gt;</span>
 <span style="color: #484848;">#+END_EXPORT</span>
 </pre>
 </div>
 </div>
 </div>
-</div>
 
-<div id="outline-container-orgbd0d8e1" class="outline-2">
-<h2 id="orgbd0d8e1">The Syntax for Lists</h2>
-<div class="outline-text-2" id="text-orgbd0d8e1">
+<div id="outline-container-orge6f4c07" class="outline-2">
+<h2 id="orge6f4c07">The Syntax for Lists</h2>
+<div class="outline-text-2" id="text-orge6f4c07">
 <p>
 Unordered lists are started in org with a plus or minus sign. To show this an org code block is used with escape characters to demonstrate the org syntax from the exported html output.
 </p>
 
-<table><tr><td>
+<div style="display: flex;">
+
+<div style="flex: 1; margin-right: 20px;">
 <div class="org-src-container">
-<pre class="src src-org">&#8203;+ bread
-&#8203;+ milk
-&#8203;+ eggs
+<pre class="src src-org">  &#8203;+ bread
+  &#8203;+ milk
+  &#8203;+ eggs
 </pre>
 </div>
+</div>
 
-</td><td>
+<div style="flex: 1;">
 <ul class="org-ul">
 <li>bread</li>
 <li>milk</li>
 <li>eggs</li>
 </ul>
-
-</td><td>
-<div class="org-src-container">
-<pre class="src src-org">1. bread
-2. milk
-3. eggs
-</pre>
 </div>
 
-</td><td>
+<div style="flex: 1; margin-right: 20px;">
+<div class="org-src-container">
+<pre class="src src-org">  1. bread
+  2. milk
+  3. eggs
+</pre>
+</div>
+</div>
+
+<div style="flex: 1;">
 <ol class="org-ol">
 <li>bread</li>
 <li>milk</li>
 <li>eggs</li>
 </ol>
-</td></tr></table>
+</div>
+
+</div>
+<br><br>
 </div>
 </div>
 
-<div id="outline-container-org4382a91" class="outline-2">
-<h2 id="org4382a91">Exporting</h2>
-<div class="outline-text-2" id="text-org4382a91">
-<p>
-To export use &rsquo;SPACE-m-e&rsquo; then &rsquo;h for HTML&rsquo; &rsquo;last type h or o&rsquo;.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgcf04a41" class="outline-2">
-<h2 id="orgcf04a41">Examples of Snippets</h2>
-<div class="outline-text-2" id="text-orgcf04a41">
+<div id="outline-container-orgf187509" class="outline-2">
+<h2 id="orgf187509">Examples of Snippets</h2>
+<div class="outline-text-2" id="text-orgf187509">
 <p>
 One enables a snippet within an org doc by using&#x2026;
 </p>
 <ul class="org-ul">
-<li>Space-i-s or&#x2026;</li>
+<li>&rsquo;Space-i-s&rsquo; or&#x2026;</li>
 <li>&lt;s tab completion general snippet</li>
-<li>#+begin-underscore-src language-name :exports both</li>
-<li>#+end-underscore-src</li>
+<li>,#+begin-src language-name :exports both</li>
+<li>,#+end-src</li>
 <li>C-c C-c runs</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org99a7cea" class="outline-2">
-<h2 id="org99a7cea">Python example</h2>
-<div class="outline-text-2" id="text-org99a7cea">
+<div id="outline-container-org207280d" class="outline-2">
+<h2 id="org207280d">Python example</h2>
+<div class="outline-text-2" id="text-org207280d">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #007bb3; font-weight: bold;">def</span> <span style="color: #622f7d; font-weight: bold;">foo</span>(x):
     <span style="color: #007bb3; font-weight: bold;">if</span> x&gt;<span style="color: #00d1e0;">0</span>:
@@ -364,11 +370,11 @@ One enables a snippet within an org doc by using&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org57e0ddb" class="outline-2">
-<h2 id="org57e0ddb">Rust example</h2>
-<div class="outline-text-2" id="text-org57e0ddb">
+<div id="outline-container-org3ff6e33" class="outline-2">
+<h2 id="org3ff6e33">Rust example</h2>
+<div class="outline-text-2" id="text-org3ff6e33">
 <div class="org-src-container">
-<pre class="src src-rust" id="org4fbe733"><span style="color: #007bb3; font-weight: bold;">fn</span> <span style="color: #622f7d; font-weight: bold;">main</span>() {
+<pre class="src src-rust" id="org2b557db"><span style="color: #007bb3; font-weight: bold;">fn</span> <span style="color: #622f7d; font-weight: bold;">main</span>() {
     <span style="color: #F52749;">println!</span>(<span style="color: #1D8B15;">"pi value is </span><span style="color: #1D8B15; font-style: italic;">{}</span><span style="color: #1D8B15;">"</span>, get_pi());
 }
 
@@ -384,9 +390,9 @@ pi value is 3.142857142857143
 </div>
 </div>
 
-<div id="outline-container-org76b38b3" class="outline-2">
-<h2 id="org76b38b3">Exporting references</h2>
-<div class="outline-text-2" id="text-org76b38b3">
+<div id="outline-container-org090afb3" class="outline-2">
+<h2 id="org090afb3">List of references in org</h2>
+<div class="outline-text-2" id="text-org090afb3">
 <p>
 The examples below will add spaces between each list or prevent opening link in a new tab which is undesirable.
 </p>
@@ -421,15 +427,24 @@ Note this is an org code block which means escape characters must be used. The c
 Here is the appropriate format
 </p>
 <div class="org-src-container">
-<pre class="src src-html">
+<pre class="src src-html">&lt;<span style="color: #622f7d; font-weight: bold;">p</span>&gt;yet to be resolved&lt;/<span style="color: #622f7d; font-weight: bold;">p</span>&gt;
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orge0b737e" class="outline-2">
-<h2 id="orge0b737e">References</h2>
-<div class="outline-text-2" id="text-orge0b737e">
+<div id="outline-container-org565bca2" class="outline-2">
+<h2 id="org565bca2">Exporting the org file in Emacs</h2>
+<div class="outline-text-2" id="text-org565bca2">
+<p>
+To export use &rsquo;SPACE-m-e&rsquo; then &rsquo;h&rsquo; for HTML. Lastly type &rsquo;h&rsquo; or &rsquo;o&rsquo; depending on if you want to open the file in a browser to see the changes.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga3e2981" class="outline-2">
+<h2 id="orga3e2981">References</h2>
+<div class="outline-text-2" id="text-orga3e2981">
 <footer>
     <ul>
         <li><p>DT youtube ref <a href="https://www.youtube.com/watch?v=K6S-AKm5snc&t=141s " target="_blank">link</a></p></li>
@@ -448,7 +463,7 @@ Here is the appropriate format
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kyle Gortych</p>
-<p class="date">Created: 2022-04-06 Wed 17:15</p>
+<p class="date">Created: 2022-04-09 Sat 15:33</p>
 </div>
 </body>
 </html>
