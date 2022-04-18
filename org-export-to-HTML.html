@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-04-15 Fri 18:12 -->
+<!-- 2022-04-18 Mon 15:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Org Export to HTML Example</title>
@@ -208,21 +208,48 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org57a34b1">Org Export</a></li>
-<li><a href="#org32e3df9">Paragraphs</a></li>
-<li><a href="#org4933ff1">Flexbox and Orgmode</a></li>
-<li><a href="#orgfda132a">The Syntax for Lists</a></li>
-<li><a href="#org02a7a30">Examples of Snippets</a></li>
-<li><a href="#orgc3dd416">Python example</a></li>
-<li><a href="#org2c4975b">Rust example</a></li>
-<li><a href="#org9dd94b9">List of references in org</a></li>
-<li><a href="#org72973e2">Exporting the org file in Emacs</a></li>
-<li><a href="#org73698cf">References</a></li>
+<li><a href="#org3244df1">Org Export</a></li>
+<li><a href="#orgbbc1e75">Paragraphs</a></li>
+<li><a href="#orga222178">Flexbox and Orgmode</a></li>
+<li><a href="#orgb9e5706">The Syntax for Lists</a></li>
+<li><a href="#org7792357">Examples of Snippets</a></li>
+<li><a href="#org39aab30">Python example</a></li>
+<li><a href="#org35144cf">Rust example</a></li>
+<li><a href="#orgc546f32">List of references in org</a></li>
+<li><a href="#orgbd39ae4">Exporting the org file in Emacs</a></li>
+<li><a href="#org9536f0b">References</a></li>
 </ul>
 </div>
 </div>
 <style>
-.button {
+.nav-style-a{
+  background-color: #ddd;
+  border: none;
+  padding: 5px 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin: 5px 5px 5px 5px;
+}
+
+.nav-style-a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn {
+  background-color: #ddd;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #f1f1f1;
+}
+
+.dropdown {
   background-color: #ddd;
   border: none;
   padding: 5px 10px;
@@ -231,37 +258,79 @@
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 16px;
 }
 
-.button:hover {
+.dropdown-content {
+  display: none;
+  position: absolute;
   background-color: #f1f1f1;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
 </style>
 
 <header style="display: flex; flex-direction: column;">
-<h1 style="align-self: center; font-size: 30px;">Org Export to HTML Example</h1>
-<img style="align-self: center;" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Emacs-logo.svg" alt="img" />
-<nav style="margin-bottom: 25px; margin-top: 15px; text-align: center;">
-  <a class="button" style="color: black; font-size: 16px;" href="index.html">Home</a>
-  <a class="button" style="color: black; font-size: 16px;" href="org-export-to-HTML.html">About Org Mode</a>
-  <a class="button" style="color: black; font-size: 16px;" href="na">LinkedIn</a>
-  <a class="button" style="color: black; font-size: 16px;" href="https://github.com/KyleGortych">GitHub</a>
+<h1 style="align-self: center; font-size: 30px;">Org Export to HTML</h1>
+<img style="align-self: center; width: 300px;" src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Emacs-logo.svg" alt="img">
+<nav style="font-size: 16px; margin-bottom: 5px; margin-top: 5px; text-align: center;">
+  <a style="color: black;" class="nav-style-a" href="index.html">Home</a>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Pages</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="org-export-to-HTML.html">About Org Mode</a>
+      </div>
+  </div>
+</nav>
+<nav style="font-size: 16px; margin-bottom: 15px; margin-top: 5px; text-align: center;">
+  <a style="color: black;" class="nav-style-a" href="na">LinkedIn</a>
+  <a style="color: black;" class="nav-style-a" href="https://github.com/KyleGortych">GitHub</a>
+  <a style="color: black;" class="nav-style-a" href="">Resume</a>
 </nav>
 </header>
 
-<div id="outline-container-org57a34b1" class="outline-2">
-<h2 id="org57a34b1">Org Export</h2>
-<div class="outline-text-2" id="text-org57a34b1">
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+<div id="outline-container-org3244df1" class="outline-2">
+<h2 id="org3244df1">Org Export</h2>
+<div class="outline-text-2" id="text-org3244df1">
 <p>
 This is a paragraph for the first heading. In org mode it is converted to the appropriate tags. Org mode has lots of features. One of the features are snipits. Snippets are blocks of code in orgmode that allow one to run diffrent languages and even shells within one org document. This is usefull because, one org mode doc can essentially be included in a project with various languages and run them all interactively showing parts of the whole programs operation.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org32e3df9" class="outline-2">
-<h2 id="org32e3df9">Paragraphs</h2>
-<div class="outline-text-2" id="text-org32e3df9">
+<div id="outline-container-orgbbc1e75" class="outline-2">
+<h2 id="orgbbc1e75">Paragraphs</h2>
+<div class="outline-text-2" id="text-orgbbc1e75">
 <div style="display: flex; flex-direction: row; font-size: 16px;">
 
   <div style="margin-right: 20px; width: 50%;">
@@ -277,9 +346,9 @@ This is a paragraph for the first heading. In org mode it is converted to the ap
 </div>
 </div>
 
-<div id="outline-container-org4933ff1" class="outline-2">
-<h2 id="org4933ff1">Flexbox and Orgmode</h2>
-<div class="outline-text-2" id="text-org4933ff1">
+<div id="outline-container-orga222178" class="outline-2">
+<h2 id="orga222178">Flexbox and Orgmode</h2>
+<div class="outline-text-2" id="text-orga222178">
 <p>
 Orgmode&rsquo;s backend works nicely with the use of flexbox. While using orgmode I have found that some features like the pre tag and float will not align sections appropriately. To align elements horizontally, flexbox seems to work best.
 </p>
@@ -304,9 +373,9 @@ Orgmode&rsquo;s backend works nicely with the use of flexbox. While using orgmod
 </div>
 </div>
 
-<div id="outline-container-orgfda132a" class="outline-2">
-<h2 id="orgfda132a">The Syntax for Lists</h2>
-<div class="outline-text-2" id="text-orgfda132a">
+<div id="outline-container-orgb9e5706" class="outline-2">
+<h2 id="orgb9e5706">The Syntax for Lists</h2>
+<div class="outline-text-2" id="text-orgb9e5706">
 <p>
 Unordered lists are started in org with a plus or minus sign. To show this an org code block is used with escape characters to demonstrate the org syntax from the exported html output.
 </p>
@@ -355,9 +424,9 @@ Unordered lists are started in org with a plus or minus sign. To show this an or
 </div>
 </div>
 
-<div id="outline-container-org02a7a30" class="outline-2">
-<h2 id="org02a7a30">Examples of Snippets</h2>
-<div class="outline-text-2" id="text-org02a7a30">
+<div id="outline-container-org7792357" class="outline-2">
+<h2 id="org7792357">Examples of Snippets</h2>
+<div class="outline-text-2" id="text-org7792357">
 <p>
 One enables a snippet within an org doc by using&#x2026;
 </p>
@@ -371,9 +440,9 @@ One enables a snippet within an org doc by using&#x2026;
 </div>
 </div>
 
-<div id="outline-container-orgc3dd416" class="outline-2">
-<h2 id="orgc3dd416">Python example</h2>
-<div class="outline-text-2" id="text-orgc3dd416">
+<div id="outline-container-org39aab30" class="outline-2">
+<h2 id="org39aab30">Python example</h2>
+<div class="outline-text-2" id="text-org39aab30">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #007bb3; font-weight: bold;">def</span> <span style="color: #622f7d; font-weight: bold;">foo</span>(x):
     <span style="color: #007bb3; font-weight: bold;">if</span> x&gt;<span style="color: #00d1e0;">0</span>:
@@ -391,11 +460,11 @@ One enables a snippet within an org doc by using&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org2c4975b" class="outline-2">
-<h2 id="org2c4975b">Rust example</h2>
-<div class="outline-text-2" id="text-org2c4975b">
+<div id="outline-container-org35144cf" class="outline-2">
+<h2 id="org35144cf">Rust example</h2>
+<div class="outline-text-2" id="text-org35144cf">
 <div class="org-src-container">
-<pre class="src src-rust" id="org6e7909a"><span style="color: #007bb3; font-weight: bold;">fn</span> <span style="color: #622f7d; font-weight: bold;">main</span>() {
+<pre class="src src-rust" id="org66d11a7"><span style="color: #007bb3; font-weight: bold;">fn</span> <span style="color: #622f7d; font-weight: bold;">main</span>() {
     <span style="color: #F52749;">println!</span>(<span style="color: #1D8B15;">"pi value is </span><span style="color: #1D8B15; font-style: italic;">{}</span><span style="color: #1D8B15;">"</span>, get_pi());
 }
 
@@ -411,9 +480,9 @@ pi value is 3.142857142857143
 </div>
 </div>
 
-<div id="outline-container-org9dd94b9" class="outline-2">
-<h2 id="org9dd94b9">List of references in org</h2>
-<div class="outline-text-2" id="text-org9dd94b9">
+<div id="outline-container-orgc546f32" class="outline-2">
+<h2 id="orgc546f32">List of references in org</h2>
+<div class="outline-text-2" id="text-orgc546f32">
 <p>
 The examples below will add spaces between each list or prevent opening link in a new tab which is undesirable.
 </p>
@@ -454,18 +523,18 @@ Here is the appropriate format
 </div>
 </div>
 
-<div id="outline-container-org72973e2" class="outline-2">
-<h2 id="org72973e2">Exporting the org file in Emacs</h2>
-<div class="outline-text-2" id="text-org72973e2">
+<div id="outline-container-orgbd39ae4" class="outline-2">
+<h2 id="orgbd39ae4">Exporting the org file in Emacs</h2>
+<div class="outline-text-2" id="text-orgbd39ae4">
 <p>
 To export use &rsquo;SPACE-m-e&rsquo; then &rsquo;h&rsquo; for HTML. Lastly type &rsquo;h&rsquo; or &rsquo;o&rsquo; depending on if you want to open the file in a browser to see the changes.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org73698cf" class="outline-2">
-<h2 id="org73698cf">References</h2>
-<div class="outline-text-2" id="text-org73698cf">
+<div id="outline-container-org9536f0b" class="outline-2">
+<h2 id="org9536f0b">References</h2>
+<div class="outline-text-2" id="text-org9536f0b">
 <footer>
     <ul>
         <li><p>DT youtube ref <a href="https://www.youtube.com/watch?v=K6S-AKm5snc&t=141s " target="_blank">link</a></p></li>
@@ -484,7 +553,7 @@ To export use &rsquo;SPACE-m-e&rsquo; then &rsquo;h&rsquo; for HTML. Lastly type
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kyle Gortych</p>
-<p class="date">Created: 2022-04-15 Fri 18:12</p>
+<p class="date">Created: 2022-04-18 Mon 15:00</p>
 </div>
 </body>
 </html>
